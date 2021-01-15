@@ -93,12 +93,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>残局遗憾，理想远方！</p>
+        <p>这次做的时第一个动态算法<br>package com.youkeda;</p>
+<p>import java.util.HashMap;</p>
+<p>public class Demo {</p>
+<p>  public static HashMap &lt; Integer, Integer &gt; cache = new HashMap &lt; &gt; ();</p>
+<p>  // 爬楼梯总数<br>  public static int f(int stepNum) {<br>    if (stepNum &lt;= 0) {<br>      return 0;<br>    }<br>    if (stepNum == 1) {<br>      return 1;<br>    }<br>    if (stepNum == 2) {<br>      return 2;<br>    } else return f(stepNum - 1) + f(stepNum - 2);<br>}<br>    public static void main(String[] args) {<br>      System.out.println(“10级楼梯最多走法：” + f(10));<br>    }</p>
+<p>}</p>
+<p>利用递归的想法，每次只能走一步或者两步，那最后就是在第九个阶梯或者第十个阶梯，所以f（10）=f（9）+f（8），以此类推到f（1）和f（2）<br>当跨出一层台阶时，只有一种方法，当跨出两层台阶是，可以选择两次一步和一次两步，所以又两种方法。<br>f（2）和f（1）递归时要确保不影响之前的结果，所以需要加入判定。<br>最后返回递归的结果即可。<br>出现的问题：本次的算法出现的问题，一开始没有什么思路，后来想清楚就比较好理解了，一开始一直报错，最后发现是大括号的问题，在删除大括号的时候一定要注意嘴硬对的匹配关系。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/15/hello/" data-id="ckjxlyiv100013su025old1xs" data-title="hello" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/15/hello/" data-id="ckjxqajpk0001eku04g6kglpc" data-title="hello" class="article-share-link">Share</a>
       
       
       
@@ -145,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/15/hello-world/" data-id="ckjxlyium00003su0g2kgeidg" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/15/hello-world/" data-id="ckjxqajpf0000eku0au00gd0l" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
