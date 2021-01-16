@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>suanfa2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="package com.youkeda; import java.util.HashMap; public class Demo { public static HashMap&lt;Integer, Integer&gt; cache &#x3D; new HashMap&lt;&gt;();  &#x2F;&#x2F; 一夜之间获取的最高现金 public static int f(int[] rooms) &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="suanfa2">
+<meta property="og:url" content="http://example.com/2021/01/16/suanfa2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="package com.youkeda; import java.util.HashMap; public class Demo { public static HashMap&lt;Integer, Integer&gt; cache &#x3D; new HashMap&lt;&gt;();  &#x2F;&#x2F; 一夜之间获取的最高现金 public static int f(int[] rooms) &amp;#123;">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-16T03:14:32.000Z">
+<meta property="article:modified_time" content="2021-01-16T03:26:42.424Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -69,9 +73,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-suanfa2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-suanfa2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/01/16/suanfa2/" class="article-date">
   <time class="dt-published" datetime="2021-01-16T03:14:32.000Z" itemprop="datePublished">2021-01-16</time>
@@ -84,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/16/suanfa2/">suanfa2</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      suanfa2
     </h1>
   
 
@@ -154,103 +156,19 @@ public static void main(String[] args) &#123;
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/15/hello/" class="article-date">
-  <time class="dt-published" datetime="2021-01-15T01:28:39.000Z" itemprop="datePublished">2021-01-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/15/hello/">hello</a>
-    </h1>
+    <a href="/2021/01/15/hello/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hello</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>这次做的时第一个动态算法<br>package com.youkeda;</p>
-<p>import java.util.HashMap;</p>
-<p>public class Demo {</p>
-<p>  public static HashMap &lt; Integer, Integer &gt; cache = new HashMap &lt; &gt; ();</p>
-<p>  // 爬楼梯总数<br>  public static int f(int stepNum) {<br>    if (stepNum &lt;= 0) {<br>      return 0;<br>    }<br>    if (stepNum == 1) {<br>      return 1;<br>    }<br>    if (stepNum == 2) {<br>      return 2;<br>    } else return f(stepNum - 1) + f(stepNum - 2);<br>}<br>    public static void main(String[] args) {<br>      System.out.println(“10级楼梯最多走法：” + f(10));<br>    }</p>
-<p>}</p>
-<p>利用递归的想法，每次只能走一步或者两步，那最后就是在第九个阶梯或者第十个阶梯，所以f（10）=f（9）+f（8），以此类推到f（1）和f（2）<br>当跨出一层台阶时，只有一种方法，当跨出两层台阶是，可以选择两次一步和一次两步，所以又两种方法。<br>f（2）和f（1）递归时要确保不影响之前的结果，所以需要加入判定。<br>最后返回递归的结果即可。<br>出现的问题：本次的算法出现的问题，一开始没有什么思路，后来想清楚就比较好理解了，一开始一直报错，最后发现是大括号的问题，在删除大括号的时候一定要注意嘴硬对的匹配关系。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/15/hello/" data-id="ckjz5gar400004su0a2ycctw1" data-title="hello" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/15/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-01-15T01:25:13.463Z" itemprop="datePublished">2021-01-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/15/hello-world/" data-id="ckjz5gara00014su05dz2anu8" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
