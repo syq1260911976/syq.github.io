@@ -71,6 +71,106 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JSON" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/01/JSON/" class="article-date">
+  <time class="dt-published" datetime="2021-02-01T10:57:59.000Z" itemprop="datePublished">2021-02-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/01/JSON/">JSON</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>//POST JSON</p>
+<p>package com.youkeda.test.http;</p>
+<p>import com.alibaba.fastjson.JSON;</p>
+<p>import java.io.IOException;</p>
+<p>import java.util.HashMap;</p>
+<p>import java.util.Map;</p>
+<p>import okhttp3.Call;</p>
+<p>import okhttp3.MediaType;</p>
+<p>import okhttp3.OkHttpClient;</p>
+<p>import okhttp3.Request;</p>
+<p>import okhttp3.RequestBody;</p>
+<p>public class JsonPoster {</p>
+<p>// 定义提交数据的类型</p>
+<p>public static final MediaType JSON_TYPE = MediaType.parse(“application/json; charset=utf-8”);</p>
+<p>/**</p>
+<ul>
+<li>向指定的 url 提交数据，以 json 的方式</li>
+</ul>
+<p>*/</p>
+<p>public String postContent(String url, Map&lt;String, String&gt; datas) {</p>
+<p>// okHttpClient 实例</p>
+<p>OkHttpClient okHttpClient = new OkHttpClient();</p>
+<p>// 数据对象转换成 json 格式字符串</p>
+<p>String param = JSON.toJSONString(datas);</p>
+<p>//post方式提交的数据</p>
+<p>RequestBody requestBody = RequestBody.create(JSON_TYPE, param);</p>
+<p>Request request = new Request.Builder().url(url).post(requestBody).build();</p>
+<p>// 使用client去请求</p>
+<p>Call call = okHttpClient.newCall(request);</p>
+<p>// 返回结果字符串</p>
+<p>String result = null;</p>
+<p>try {</p>
+<p>// 获得返回结果</p>
+<p>result = call.execute().body().string();</p>
+<p>} catch (IOException e) {</p>
+<p>// 抓取异常</p>
+<p>System.out.println(“request “ + url + “ error . “);</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<p>return result;</p>
+<p>}</p>
+<p>public static void main(String[] args) {</p>
+<p>String url = “<a target="_blank" rel="noopener" href="https://www.fastmock.site/mock/3d95acf3f26358ef032d8a23bfdead99/api/posts&quot;">https://www.fastmock.site/mock/3d95acf3f26358ef032d8a23bfdead99/api/posts&quot;</a>;</p>
+<p>Map&lt;String, String&gt; datas = new HashMap();</p>
+<p>datas.put(“name”, “张飞”);</p>
+<p>datas.put(“secondName”, “翼德”);</p>
+<p>JsonPoster poster = new JsonPoster();</p>
+<p>String content = poster.postContent(url, datas);</p>
+<p>System.out.println(“API调用结果”);</p>
+<p>System.out.println(content);</p>
+<p>}</p>
+<p>}</p>
+<p>//pom.xml  Json操作库</p>
+<dependency>
+
+<pre><code>    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+
+    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+
+    &lt;version&gt;1.2.62&lt;/version&gt;
+
+  &lt;/dependency&gt;</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/01/JSON/" data-id="ckkmgmp810001nwu0hpa4dpa2" data-title="JSON" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-API" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/02/01/API/" class="article-date">
@@ -142,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/01/API/" data-id="ckkmgl9jt0000rsu04louddno" data-title="API" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/01/API/" data-id="ckkmgmp7w0000nwu027nlh0ur" data-title="API" class="article-share-link">Share</a>
       
       
       
@@ -230,7 +330,7 @@ public static void main(String[] args) &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/16/suanfa2/" data-id="ckkmgl9k40003rsu009jm2pj9" data-title="suanfa2" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/16/suanfa2/" data-id="ckkmgmp8a0004nwu0b3uq7zt6" data-title="suanfa2" class="article-share-link">Share</a>
       
       
       
@@ -275,7 +375,7 @@ public static void main(String[] args) &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/15/hello/" data-id="ckkmgl9k20002rsu060kw1bsx" data-title="hello" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/15/hello/" data-id="ckkmgmp830002nwu04j581kdq" data-title="hello" class="article-share-link">Share</a>
       
       
       
@@ -322,7 +422,7 @@ public static void main(String[] args) &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/15/hello-world/" data-id="ckkmgl9k00001rsu05lnkg2vm" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/15/hello-world/" data-id="ckkmgmp840003nwu02x13dtd8" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -363,6 +463,10 @@ public static void main(String[] args) &#123;
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/02/01/JSON/">JSON</a>
+          </li>
         
           <li>
             <a href="/2021/02/01/API/">API</a>
